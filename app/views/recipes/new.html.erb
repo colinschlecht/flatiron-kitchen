@@ -1,0 +1,8 @@
+<h1>New Recipe</h1>
+<% if @recipe.errors.any? %>
+    <% @recipe.errors.full_messages.each do |msg| %>
+        <div id="error_explanation"><%= msg %></div>
+    <% end %>
+<% end %>
+
+<%= render 'form' %>
